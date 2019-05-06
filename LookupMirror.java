@@ -1,5 +1,5 @@
 
-public class LookupMirror{
+public class LookupMirror extends Lookup{
 	Class<?> lookupClass;
 	int allowedModes;
 	
