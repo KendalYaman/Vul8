@@ -20,7 +20,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws Throwable {
-		BadCast1 e = new BadCast2();
+		BadCast2 e = new BadCast1();
 		handleEx(e);
 		MethodType mt = MethodType.methodType(void.class, System.class);
 		MethodHandle mh = MethodHandles.lookup().findStatic(System.class, "setSecurityManager", mt);
