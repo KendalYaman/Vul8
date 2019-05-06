@@ -11,7 +11,7 @@ public class Main {
 		LookupMirror lm = new LookupMirror();
 	}
 	
-	public static void throwEx() throws BadCast1{
+	public static void throwEx() throws{
 		throw new BadCast1();
 	}
 	
