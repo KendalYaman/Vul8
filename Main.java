@@ -1,6 +1,8 @@
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
+import java.io.*;
+import java.io.IOException;
 
 public class Main {
 	public static class BadCast1 extends Throwable{
@@ -29,7 +31,7 @@ public class Main {
 		try{
 
 			File file = new File("testFile.txt");
-			if(file.createNewFile){
+			if(file.createNewFile()){
 				System.out.println("Okay");
 			}else{
 				System.out.println("Nope");
