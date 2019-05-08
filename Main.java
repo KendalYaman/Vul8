@@ -22,8 +22,8 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws Throwable {
-		BadCast2 e = new BadCast2();
-		handleEx(e);
+		BadCast2 t = new BadCast2();
+		handleEx(t);
 		MethodType mt = MethodType.methodType(void.class, System.class);
 		MethodHandle mh = MethodHandles.lookup().findStatic(System.class, "findStaticSetter", mt);
 		mh.invokeExact(System.class, null);
